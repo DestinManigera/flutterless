@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hotels Booking',
       home: HomePage(),
@@ -351,7 +351,13 @@ class HotelCard extends StatelessWidget {
                 Text(
                   hotelData['title'],
                 ),
-                Text('\$' + hotelData['price']),
+                Text(
+                  '\$' + hotelData['price'],
+                  style: GoogleFonts.nunito(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
               ],
             ),
           )
